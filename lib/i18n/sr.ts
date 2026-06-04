@@ -203,7 +203,7 @@ const sr: Dictionary = {
     cta: "Zakaži prvi trening",
     ctaAria: "Zakaži prvi trening preko WhatsApp-a",
     addressLabel: "Trg Nikole Pašića 12, Beograd",
-    whatsappLabel: "WhatsApp: 063/406236",
+    whatsappLabel: "WhatsApp",
     instagramLabel: "Instagram",
   },
   footer: {
@@ -211,7 +211,7 @@ const sr: Dictionary = {
     studio: "Studio",
     intro: "Tvoje mesto za pokret, mir i snagu u centru Beograda.",
     location: "Trg Nikole Pašića 12, Beograd",
-    phone: "063/406236",
+    phone: "063406236",
     whatsappLabel: "WhatsApp",
     addressLabel: "Adresa",
     book: "Zakaži prvi trening",

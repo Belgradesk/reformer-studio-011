@@ -1,8 +1,17 @@
 export const locales = ["sr", "en"] as const;
 export type Locale = (typeof locales)[number];
 
-export function isLocale(value: string): value is Locale {
-  return locales.includes(value as Locale);
+export function isLocale(value: string | null | undefined): value is Locale {
+  return value != null && locales.includes(value as Locale);
+}
+
+export function getLocaleFromPathname(pathname: string): Locale {
+  for (const locale of locales) {
+    if (pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)) {
+      return locale;
+    }
+  }
+  return "sr";
 }
 
 export interface Dictionary {

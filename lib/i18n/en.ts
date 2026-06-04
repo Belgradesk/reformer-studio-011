@@ -203,7 +203,7 @@ const en: Dictionary = {
     cta: "Book your first session",
     ctaAria: "Book your first session via WhatsApp",
     addressLabel: "12 Nikole Pašića Square, Belgrade",
-    whatsappLabel: "WhatsApp: 063/406236",
+    whatsappLabel: "WhatsApp",
     instagramLabel: "Instagram",
   },
   footer: {
@@ -211,7 +211,7 @@ const en: Dictionary = {
     studio: "Studio",
     intro: "Your place for movement, calm, and strength in central Belgrade.",
     location: "12 Nikole Pašića Square, Belgrade",
-    phone: "063/406236",
+    phone: "063406236",
     whatsappLabel: "WhatsApp",
     addressLabel: "Address",
     book: "Book your first session",

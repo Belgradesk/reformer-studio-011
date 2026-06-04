@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { headers } from "next/headers";
 import { ClientShell } from "@/components/ClientShell";
+import { isLocale } from "@/lib/i18n";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -23,13 +25,20 @@ export const metadata: Metadata = {
   description: "Boutique reformer pilates studio in Belgrade.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const langHeader = (await headers()).get("x-lang");
+  const lang = isLocale(langHeader) ? langHeader : "sr";
+
   return (
-    <html suppressHydrationWarning className={`${cormorant.variable} ${manrope.variable}`}>
+    <html
+      lang={lang}
+      suppressHydrationWarning
+      className={`${cormorant.variable} ${manrope.variable}`}
+    >
       <body>
         <ClientShell>{children}</ClientShell>
       </body>

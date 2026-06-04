@@ -9,4 +9,4 @@ export function getDictionary(locale: Locale): Dictionary {
 }
 
 export { locales, type Dictionary, type Locale } from "./types";
-export { isLocale } from "./types";
+export { getLocaleFromPathname, isLocale } from "./types";

@@ -3,8 +3,9 @@ import type { Locale } from "@/lib/i18n";
 export const SITE_CONFIG = {
   studioName: "Reformer Studio 011",
   address: "Trg Nikole Pašića 12, Beograd",
-  phoneDisplay: "063/406236",
+  phoneDisplay: "063406236",
   phoneTel: "tel:+38163406236",
+  phoneTelLocal: "tel:063406236",
   whatsappNumber: "38163406236",
   defaultWhatsappMessage: "Zdravo, želim da zakažem prvi trening",
   defaultWhatsappMessageEn: "Hello, I would like to book my first session",

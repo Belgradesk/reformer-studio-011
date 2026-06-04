@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { locales } from "@/lib/i18n";
+import { getLocaleFromPathname, locales } from "@/lib/i18n";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -17,7 +17,13 @@ export function middleware(request: NextRequest) {
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
   );
 
-  if (hasLocale) return NextResponse.next();
+  if (hasLocale) {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set("x-lang", getLocaleFromPathname(pathname));
+    return NextResponse.next({
+      request: { headers: requestHeaders },
+    });
+  }
 
   return NextResponse.redirect(new URL("/sr", request.url));
 }

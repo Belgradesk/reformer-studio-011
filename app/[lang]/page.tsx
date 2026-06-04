@@ -8,7 +8,6 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Highlights } from "@/components/Highlights";
 // import { Instructor } from "@/components/Instructor";
-import { LangHtml } from "@/components/LangHtml";
 import { Nav } from "@/components/Nav";
 import { Programs } from "@/components/Programs";
 import { Reviews } from "@/components/Reviews";
@@ -47,7 +46,6 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <>
-      <LangHtml lang={locale} />
       <Nav locale={locale} nav={dict.nav} />
       <Hero hero={dict.hero} locale={locale} />
       <WhyStudio whyStudio={dict.whyStudio} />

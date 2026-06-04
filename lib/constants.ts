@@ -9,6 +9,7 @@ export const FACEBOOK_URL =
 
 export const PHONE_DISPLAY = SITE_CONFIG.phoneDisplay;
 export const PHONE_TEL = SITE_CONFIG.phoneTel;
+export const PHONE_TEL_LOCAL = SITE_CONFIG.phoneTelLocal;
 export const WHATSAPP_URL = getWhatsAppUrl();
 
 export const ADDRESS = SITE_CONFIG.address;
