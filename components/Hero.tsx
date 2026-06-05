@@ -41,17 +41,17 @@ export function Hero({ hero, locale }: HeroProps) {
             <span className="hero-secondary-cta__arw" aria-hidden="true" />
           </a>
         </div>
+        <div className="hero-media">
+          <Image
+            src="/assets/hero-main.jpg"
+            alt={hero.imgAlt}
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 55vw"
+            className="img-cover hero-img"
+          />
+        </div>
         <p className="hero-trust">{hero.trust}</p>
-      </div>
-      <div className="hero-media">
-        <Image
-          src="/assets/hero-main.jpg"
-          alt={hero.imgAlt}
-          fill
-          priority
-          sizes="(max-width: 860px) 100vw, 50vw"
-          className="img-cover hero-img"
-        />
       </div>
       <div className="hero-idx">{hero.idx}</div>
       <div className="hero-scroll">{hero.scroll}</div>
