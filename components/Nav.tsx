@@ -47,14 +47,6 @@ export function Nav({ locale, nav }: NavProps) {
           <LanguageSwitch locale={locale} />
         </div>
         <div className="nav-mobile-actions">
-          <BookingButton
-            locale={locale}
-            variant="secondary"
-            className="nav-booking-btn nav-booking-btn--mobile"
-            ariaLabel={nav.bookCtaAria}
-          >
-            {nav.bookCta}
-          </BookingButton>
           <button
             type="button"
             className="nav-toggle"

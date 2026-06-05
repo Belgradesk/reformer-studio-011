@@ -69,7 +69,6 @@ export function Footer({ footer, locale }: FooterProps) {
       </div>
       <div className="foot-bottom">
         <span>© 2026 Reformer Studio 011</span>
-        <span>{footer.tagline}</span>
       </div>
     </footer>
   );
