@@ -15,15 +15,44 @@ export function StickyBookingBar({ locale, label, ariaLabel }: StickyBookingBarP
 
   useEffect(() => {
     const hero = document.querySelector(".hero");
+    const ctaBand = document.querySelector(".cta-band");
+    const footer = document.querySelector(".site-footer");
     if (!hero) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => setVisible(!entry.isIntersecting),
+    let heroInView = true;
+    const finalInView = new Set<Element>();
+
+    const update = () => {
+      setVisible(!heroInView && finalInView.size === 0);
+    };
+
+    const heroObserver = new IntersectionObserver(
+      ([entry]) => {
+        heroInView = entry.isIntersecting;
+        update();
+      },
       { threshold: 0, rootMargin: "0px" }
     );
 
-    observer.observe(hero);
-    return () => observer.disconnect();
+    const finalObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) finalInView.add(entry.target);
+          else finalInView.delete(entry.target);
+        });
+        update();
+      },
+      { threshold: 0, rootMargin: "0px" }
+    );
+
+    heroObserver.observe(hero);
+    if (ctaBand) finalObserver.observe(ctaBand);
+    if (footer) finalObserver.observe(footer);
+
+    return () => {
+      heroObserver.disconnect();
+      finalObserver.disconnect();
+    };
   }, []);
 
   return (

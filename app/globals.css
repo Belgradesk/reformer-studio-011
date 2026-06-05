@@ -1440,6 +1440,17 @@ section {
   overflow: hidden;
 }
 
+.about .figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: var(--cream);
+  mix-blend-mode: multiply;
+  opacity: 0.15;
+}
+
 .about .figure .about-img {
   transition: transform 1.6s var(--ease);
 }
