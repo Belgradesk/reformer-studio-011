@@ -780,8 +780,9 @@ h4 em,
   justify-content: center;
   gap: 2.5rem;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.5s var(--ease);
+  transition: opacity 0.5s var(--ease), visibility 0.5s var(--ease);
 }
 
 .nav-mobile a {
@@ -796,6 +797,7 @@ h4 em,
 
 .nav-open .nav-mobile {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -917,56 +919,6 @@ h4 em,
     max-width: 100%;
     margin-inline: auto;
     box-sizing: border-box;
-  }
-
-  .hero {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-    overflow: hidden;
-    background: var(--cream);
-  }
-
-  .hero-copy {
-    position: relative;
-    z-index: 1;
-    flex: 0 0 auto;
-    width: 100%;
-    padding-top: clamp(5.5rem, 14vh, 6.5rem);
-    padding-bottom: 1.5rem;
-    padding-inline: 1.5rem;
-    min-height: auto;
-    justify-content: flex-start;
-    background: var(--cream);
-  }
-
-  .hero-media {
-    position: relative;
-    inset: auto;
-    flex: 0 0 auto;
-    width: 100%;
-    height: 40vh;
-    min-height: 240px;
-    max-height: 360px;
-    opacity: 1;
-    border-radius: 2px;
-    z-index: 0;
-    overflow: hidden;
-    background: var(--ink);
-  }
-
-  .hero-media .hero-img {
-    object-position: center 75%;
-    object-fit: cover;
-  }
-
-  .hero-media::after {
-    display: none;
-  }
-
-  .hero-scroll,
-  .hero-idx {
-    display: none;
   }
 }
 
@@ -2097,5 +2049,73 @@ section {
 @media (max-width: 860px) {
   .rev-secondary-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile hero — must follow base .hero rules to win cascade */
+@media (max-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    min-height: auto;
+    overflow: hidden;
+    background: var(--cream);
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: auto;
+    padding-top: clamp(5.5rem, 14vh, 6.5rem);
+    padding-bottom: 1.5rem;
+    padding-inline: 1.5rem;
+    justify-content: flex-start;
+    background: var(--cream);
+  }
+
+  .hero-actions {
+    position: static;
+    top: auto;
+    width: 100%;
+  }
+
+  .hero-actions .booking-btn--primary {
+    position: static;
+    top: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-media {
+    position: relative;
+    inset: auto;
+    flex: 0 0 auto;
+    order: 2;
+    width: 100%;
+    height: 38vh;
+    min-height: 220px;
+    max-height: none;
+    opacity: 1;
+    border-radius: 2px;
+    z-index: 0;
+    overflow: hidden;
+    background: var(--ink);
+  }
+
+  .hero-media .hero-img {
+    object-position: center 75%;
+    object-fit: cover;
+  }
+
+  .hero-media::after {
+    display: none;
+  }
+
+  .hero-scroll,
+  .hero-idx {
+    display: none;
   }
 }
