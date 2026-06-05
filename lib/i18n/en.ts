@@ -21,7 +21,7 @@ const en: Dictionary = {
     ariaLabel: "Book a session via WhatsApp",
   },
   hero: {
-    eyebrow: "REFORMER PILATES STUDIO · BELGRADE",
+    eyebrow: "REFORMER STUDIO 011",
     emotionalLine1: "Movement that shapes the body.",
     emotionalLine2: "Strength that holds you.",
     croHeadline: "Reformer pilates for a strong, stable, and lengthened body",

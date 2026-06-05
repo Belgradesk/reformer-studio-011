@@ -845,8 +845,56 @@ h4 em,
     line-height: 0.98;
   }
 
+  .rev-secondary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .foot-top {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .site-footer {
+    padding-inline: 1.5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .foot-col {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .foot-big {
+    font-size: clamp(2rem, 10vw, 3rem);
+    overflow-wrap: break-word;
+  }
+
+  .foot-bottom {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .why-studio .wrap {
+    padding-inline: 1.5rem;
+  }
+
   .why-strip {
     grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .why-strip__item {
+    padding-inline: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .why-strip__item--ruled {
@@ -855,13 +903,63 @@ h4 em,
     padding-top: 1.75rem;
   }
 
-  .rev-secondary-grid {
-    grid-template-columns: 1fr;
+  .sticky-booking {
+    left: 0;
+    right: 0;
+    padding-inline: 1rem;
+    box-sizing: border-box;
   }
 
-  .foot-top {
+  .sticky-booking .booking-btn--sticky {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    box-sizing: border-box;
+  }
+
+  .hero {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    min-height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-media {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    min-height: 100%;
+    opacity: 1;
+    border-radius: 0;
+    z-index: 0;
+  }
+
+  .hero-media .hero-img {
+    object-position: 72% 88%;
+    object-fit: cover;
+  }
+
+  .hero-media::after {
+    background: linear-gradient(
+      to bottom,
+      var(--cream) 35%,
+      rgba(239, 233, 221, 0.45) 62%,
+      transparent 100%
+    );
+  }
+
+  .hero-copy {
+    padding-top: clamp(6rem, 16vh, 7.5rem);
+    padding-bottom: clamp(2rem, 10vh, 3.5rem);
+    padding-inline: 1.5rem;
+    min-height: 100svh;
+    justify-content: flex-start;
+  }
+
+  .hero-scroll,
+  .hero-idx {
+    display: none;
   }
 }
 
@@ -1109,36 +1207,6 @@ h4 em,
   text-transform: uppercase;
   color: #fff;
   writing-mode: vertical-rl;
-}
-
-@media (max-width: 860px) {
-  .hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-  .hero-media {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    min-height: 100%;
-    opacity: 0.26;
-    border-radius: 0;
-  }
-  .hero-media::after {
-    background: linear-gradient(180deg, var(--cream) 0%, rgba(239, 233, 221, 0.88) 50%, rgba(239, 233, 221, 0.55));
-  }
-  .hero-copy {
-    padding-top: clamp(6rem, 16vh, 7.5rem);
-    padding-bottom: clamp(1.5rem, 5vh, 2.5rem);
-    min-height: 100svh;
-    justify-content: flex-start;
-  }
-  .hero-scroll {
-    display: none;
-  }
-  .hero-idx {
-    display: none;
-  }
 }
 
 .why-studio {
