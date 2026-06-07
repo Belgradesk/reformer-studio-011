@@ -14,7 +14,6 @@ export function Hero({ hero, locale }: HeroProps) {
   return (
     <header className="hero section-air">
       <div className="hero-copy">
-        <p className="hero-eyebrow label">{hero.eyebrow}</p>
         <h1>
           {USE_EMOTIONAL_HEADLINE ? (
             <>

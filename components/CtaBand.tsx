@@ -8,7 +8,7 @@ type CtaBandProps = {
 
 export function CtaBand({ ctaBand, locale }: CtaBandProps) {
   return (
-    <section className="cta-band section-air" id="zakaži">
+    <section className="cta-band" id="zakaži">
       <div className="wrap cta-band-inner reveal">
         <h2>{ctaBand.title}</h2>
         <p>{ctaBand.text}</p>

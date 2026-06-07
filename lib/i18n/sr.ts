@@ -52,11 +52,12 @@ const sr: Dictionary = {
     ],
   },
   strip: [
-    "Preciznost",
-    "Kontrola",
-    "Male grupe",
-    "Stabilnost",
-    "Snaga iz centra",
+    "Popravljanje posture",
+    "Jačanje dubokih mišića",
+    "Bolja mobilnost",
+    "Stabilniji core",
+    "Podrška leđima",
+    "Aktivacija mišića karličnog dna",
   ],
   about: {
     eyebrow: "O studiju",

@@ -17,6 +17,9 @@
   --space-section-air: clamp(5rem, 10vw, 8rem);
   --space-section-dense: clamp(3rem, 6vw, 5rem);
   --hairline: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+  --nav-logo-height: clamp(68px, 11.5vw, 90px);
+  --nav-bar-padding: 1.3rem;
+  --nav-offset: calc(var(--nav-logo-height) + var(--nav-bar-padding) + clamp(1.5rem, 4vh, 2.5rem));
 }
 
 @supports not (color: color-mix(in srgb, black 50%, white)) {
@@ -53,7 +56,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: var(--nav-offset);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -563,7 +566,7 @@ h4 em,
 }
 
 .cta-band-btn.booking-btn--primary {
-  padding: 1.25rem 3rem;
+  padding: 1.3rem 3.125rem;
 }
 
 .sticky-booking {
@@ -644,9 +647,9 @@ h4 em,
 
 .logo-img {
   display: block;
-  height: clamp(44px, 7.5vw, 58px);
+  height: clamp(68px, 11.5vw, 90px);
   width: auto;
-  max-width: min(220px, 46vw);
+  max-width: min(337px, 71vw);
   object-fit: contain;
 }
 
@@ -845,6 +848,18 @@ h4 em,
     line-height: 0.98;
   }
 
+  .cta-band {
+    padding: 64px 1.5rem 62px;
+  }
+
+  .cta-band-inner h2 {
+    margin-bottom: 20px;
+  }
+
+  .cta-band-inner > p {
+    margin-bottom: 34px;
+  }
+
   .rev-secondary-grid {
     grid-template-columns: 1fr;
   }
@@ -935,10 +950,10 @@ h4 em,
   width: 45%;
   max-width: 45%;
   min-height: min(100svh, 920px);
-  padding: clamp(5rem, 10vh, 7rem) clamp(1.5rem, 5vw, 4rem) clamp(3.5rem, 9vh, 5.5rem);
+  padding: var(--nav-offset) clamp(1.5rem, 5vw, 4rem) clamp(3.5rem, 9vh, 5.5rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .hero-eyebrow {
@@ -1344,7 +1359,7 @@ h4 em,
 }
 
 .cta-band-inner .booking-btn--primary {
-  margin-top: 0.25rem;
+  margin-top: 0;
 }
 
 .strip {
@@ -1898,7 +1913,8 @@ section {
 
 .cta-band {
   background: var(--parchment);
-  padding-block: 0;
+  padding: 84px clamp(1.5rem, 5vw, 4rem) 68px;
+  text-align: center;
 }
 
 .cta-band-inner {
@@ -1910,19 +1926,25 @@ section {
 
 .cta-band-inner h2 {
   font-family: var(--serif);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 4rem);
   line-height: 1.12;
-  margin: 0 auto 1.25rem;
-  max-width: min(34ch, 92vw);
+  max-width: min(760px, 92vw);
+  margin: 0 auto 22px;
 }
 
 .cta-band-inner > p {
   color: var(--ink-soft);
   font-size: 1.05rem;
   line-height: 1.6;
-  max-width: 52ch;
-  margin: 0 auto 1.75rem;
+  max-width: min(560px, 92vw);
+  margin: 0 auto 42px;
   font-weight: 400;
+}
+
+.cta-band-inner .booking-btn--primary,
+.cta-band-btn.booking-btn--primary {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .foot-intro {
@@ -1934,6 +1956,7 @@ section {
 }
 
 .site-footer {
+  margin-top: 0;
   background: var(--ink);
   color: var(--cream);
   padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem) 2.5rem;
@@ -2079,7 +2102,7 @@ section {
     width: 100%;
     max-width: 100%;
     min-height: auto;
-    padding-top: clamp(5.5rem, 14vh, 6.5rem);
+    padding-top: var(--nav-offset);
     padding-bottom: 1.5rem;
     padding-inline: 1.5rem;
     justify-content: flex-start;
