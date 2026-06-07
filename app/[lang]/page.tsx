@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { About } from "@/components/About";
+import { BeforeTeaser } from "@/components/BeforeTeaser";
 import { CtaBand } from "@/components/CtaBand";
 import { Equipment } from "@/components/Equipment";
 import { FirstSession } from "@/components/FirstSession";
@@ -9,6 +10,7 @@ import { Hero } from "@/components/Hero";
 import { Highlights } from "@/components/Highlights";
 // import { Instructor } from "@/components/Instructor";
 import { Nav } from "@/components/Nav";
+import { Pricing } from "@/components/Pricing";
 import { Programs } from "@/components/Programs";
 import { Reviews } from "@/components/Reviews";
 import { Showcase } from "@/components/Showcase";
@@ -54,7 +56,9 @@ export default async function HomePage({ params }: PageProps) {
       <Highlights highlights={dict.highlights} />
       <Equipment equip={dict.equip} />
       <Programs programs={dict.programs} locale={locale} />
+      <Pricing pricing={dict.pricing} locale={locale} />
       <FirstSession firstSession={dict.firstSession} locale={locale} />
+      <BeforeTeaser beforeTeaser={dict.beforeTeaser} locale={locale} />
       <Showcase showcase={dict.showcase} />
       {/* Instructor hidden until bio is ready */}
       <Reviews reviews={dict.reviews} />

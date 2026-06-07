@@ -16,10 +16,11 @@ export function Nav({ locale, nav }: NavProps) {
   const close = () => setOpen(false);
 
   const links = [
-    { href: "#studio", label: nav.studio },
-    { href: "#oprema", label: nav.equip },
-    { href: "#programi", label: nav.programs },
-    { href: "#kontakt", label: nav.contact },
+    { href: `/${locale}#studio`, label: nav.studio },
+    { href: `/${locale}#oprema`, label: nav.equip },
+    { href: `/${locale}#programi`, label: nav.programs },
+    { href: `/${locale}/info`, label: nav.info },
+    { href: `/${locale}#kontakt`, label: nav.contact },
   ];
 
   return (

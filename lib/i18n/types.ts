@@ -23,6 +23,7 @@ export interface Dictionary {
     studio: string;
     equip: string;
     programs: string;
+    info: string;
     contact: string;
     bookCta: string;
     bookCtaAria: string;
@@ -91,6 +92,17 @@ export interface Dictionary {
     cta: string;
     ctaAria: string;
   };
+  pricing: {
+    title: string;
+    cards: { name: string; price: string; desc: string; cta: string }[];
+    note: string;
+  };
+  beforeTeaser: {
+    title: string;
+    body: string;
+    cards: string[];
+    cta: string;
+  };
   showcase: {
     title: string;
     text: string;
@@ -117,6 +129,39 @@ export interface Dictionary {
     addressLabel: string;
     whatsappLabel: string;
     instagramLabel: string;
+  };
+  info: {
+    metaTitle: string;
+    metaDescription: string;
+    h1: string;
+    intro: string;
+    before: {
+      title: string;
+      body: string;
+      items: string[];
+    };
+    cancellation: {
+      title: string;
+      body: string;
+    };
+    audience: {
+      title: string;
+      body: string;
+      benefits: string[];
+    };
+    trainers: {
+      title: string;
+      body: string;
+    };
+    booking: {
+      title: string;
+      body: string;
+      cta: string;
+    };
+    faq: {
+      title: string;
+      items: { q: string; a: string }[];
+    };
   };
   footer: {
     contact: string;

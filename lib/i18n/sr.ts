@@ -10,6 +10,7 @@ const sr: Dictionary = {
     studio: "Studio",
     equip: "Oprema",
     programs: "Programi",
+    info: "Informacije",
     contact: "Kontakt",
     bookCta: "Zakaži trening",
     bookCtaAria: "Zakaži trening preko WhatsApp-a",
@@ -158,6 +159,36 @@ const sr: Dictionary = {
     cta: "Zakaži prvi trening",
     ctaAria: "Zakaži prvi trening preko WhatsApp-a",
   },
+  pricing: {
+    title: "Cenovnik",
+    cards: [
+      {
+        name: "Probni čas",
+        price: "2.000 RSD",
+        desc: "Ako nakon probnog časa uplatiš paket, iznos probnog časa se odbija od cene paketa.",
+        cta: "Zakaži probni čas",
+      },
+      {
+        name: "Paket 8 časova",
+        price: "12.400 RSD",
+        desc: "Za redovan ritam treninga i postepeno građenje snage, stabilnosti i kontrole pokreta.",
+        cta: "Prijavi se",
+      },
+      {
+        name: "Paket 12 časova",
+        price: "16.000 RSD",
+        desc: "Za one koji žele kontinuitet, brži napredak i sigurniji osećaj u telu.",
+        cta: "Prijavi se",
+      },
+    ],
+    note: "Primer: ako uplatiš probni čas od 2.000 RSD i nakon toga izabereš paket od 8 časova, doplaćuješ razliku od 10.400 RSD.",
+  },
+  beforeTeaser: {
+    title: "Pre prvog časa",
+    body: "Za trening ponesi laganu, udobnu odeću. Vežba se bosa noga ili u čarapicama, bez patika. Peškire ne moraš da nosiš, dostupni su u studiju ako želiš da se istuširaš posle treninga.",
+    cards: ["Lagana odeća", "Bosa noga ili čarapice", "Peškiri su dostupni"],
+    cta: "Saznaj više",
+  },
   showcase: {
     title: "Oseti razliku već posle prvog časa.",
     text: "Svaki čas je vođen tako da izađeš snažnija, smirenija i povezanija sa svojim telom.",
@@ -177,8 +208,8 @@ const sr: Dictionary = {
     ],
   },
   reviews: {
-    eyebrow: "Iskustva polaznika",
-    title: "Iskustva polaznika",
+    eyebrow: "Iskustva polaznica",
+    title: "Iskustva polaznica",
     lead: "Najbolje o studiju govore oni koji su već pronašli svoj ritam na reformeru.",
     items: [
       {
@@ -206,6 +237,74 @@ const sr: Dictionary = {
     addressLabel: "Trg Nikole Pašića 12, Beograd",
     whatsappLabel: "WhatsApp",
     instagramLabel: "Instagram",
+  },
+  info: {
+    metaTitle: "Informacije pre prvog časa | Reformer Studio 011",
+    metaDescription:
+      "Sve što treba da znaš pre prvog reformer pilates treninga: šta poneti, cenovnik, pravila otkazivanja i odgovori na česta pitanja.",
+    h1: "Informacije pre prvog časa",
+    intro:
+      "Sve što treba da znaš pre dolaska u Reformer Studio 011, od opreme i zakazivanja do cenovnika i pravila otkazivanja.",
+    before: {
+      title: "Pre prvog časa",
+      body: "Za trening ponesi laganu, udobnu odeću u kojoj možeš slobodno da se krećeš. Vežba se bosa noga ili u čarapicama, bez patika. Peškire ne moraš da nosiš. Dostupni su u studiju i možeš ih koristiti ako želiš da se istuširaš posle treninga.",
+      items: [
+        "Lagana i udobna odeća",
+        "Bosa noga ili čarapice",
+        "Bez patika",
+        "Peškiri dostupni u studiju",
+      ],
+    },
+    cancellation: {
+      title: "Otkazivanje termina",
+      body: "Termin je potrebno otkazati najmanje 24h ranije. U slučaju kasnijeg otkazivanja, termin se računa kao iskorišćen čas.",
+    },
+    audience: {
+      title: "Kome je namenjen reformer pilates?",
+      body: "Reformer pilates je namenjen širokoj populaciji, posebno ženama koje žele da rade na držanju, mobilnosti, stabilnosti i snazi bez nepotrebnog opterećenja za zglobove. Kroz kontrolisane pokrete aktiviraju se duboki mišići stomaka, leđa i karličnog dna, dok telo postepeno postaje snažnije, pokretljivije i sigurnije.",
+      benefits: [
+        "Bolja postura",
+        "Jačanje dubokih mišića",
+        "Stabilniji core",
+        "Bolja mobilnost",
+        "Podrška leđima",
+        "Aktivacija karličnog dna",
+      ],
+    },
+    trainers: {
+      title: "Sertifikovani treneri",
+      body: "Časove vode treneri sertifikovani za reformer pilates, uz pažljivo vođenje, korekcije pokreta i podršku tokom celog treninga.",
+    },
+    booking: {
+      title: "Zakazivanje",
+      body: "Termin možeš zakazati putem Instagram poruke, telefonom ili preko WhatsApp-a.",
+      cta: "Zakaži termin",
+    },
+    faq: {
+      title: "Česta pitanja",
+      items: [
+        {
+          q: "Da li postoji besplatan probni čas?",
+          a: "Probni čas se plaća 2.000 RSD. Ako nakon probnog časa uplatiš paket, taj iznos se odbija od cene paketa.",
+        },
+        {
+          q: "Šta treba da ponesem na trening?",
+          a: "Ponesi laganu, udobnu odeću. Vežba se bosa noga ili u čarapicama, bez patika.",
+        },
+        {
+          q: "Da li treba da ponesem peškir?",
+          a: "Ne moraš. Peškiri su dostupni u studiju i koriste se ako želiš da se istuširaš posle treninga.",
+        },
+        {
+          q: "Kome je namenjen reformer pilates?",
+          a: "Reformer pilates je namenjen širokoj populaciji, posebno ženama koje žele bolju posturu, jači core, veću mobilnost i stabilnije telo.",
+        },
+        {
+          q: "Kada treba da otkažem termin?",
+          a: "Termin je potrebno otkazati najmanje 24h ranije. U suprotnom, termin se računa kao iskorišćen čas.",
+        },
+      ],
+    },
   },
   footer: {
     contact: "Kontakt",

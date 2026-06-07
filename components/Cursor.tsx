@@ -24,7 +24,7 @@ export function Cursor() {
       "(prefers-reduced-motion: reduce)"
     ).matches;
     const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
-    const narrow = window.matchMedia("(max-width: 768px)").matches;
+    const narrow = window.matchMedia("(max-width: 860px)").matches;
 
     if (reducedMotion || coarsePointer || narrow) {
       document.body.classList.add("cursor-off");

@@ -10,6 +10,7 @@ const en: Dictionary = {
     studio: "Studio",
     equip: "Equipment",
     programs: "Programs",
+    info: "Info",
     contact: "Contact",
     bookCta: "Book a session",
     bookCtaAria: "Book a session via WhatsApp",
@@ -157,6 +158,36 @@ const en: Dictionary = {
     cta: "Book your first session",
     ctaAria: "Book your first session via WhatsApp",
   },
+  pricing: {
+    title: "Pricing",
+    cards: [
+      {
+        name: "Trial class",
+        price: "2,000 RSD",
+        desc: "If you purchase a package after your trial class, the trial fee is deducted from the package price.",
+        cta: "Book a trial class",
+      },
+      {
+        name: "8-class package",
+        price: "12,400 RSD",
+        desc: "For a steady training rhythm and gradually building strength, stability and control of movement.",
+        cta: "Sign up",
+      },
+      {
+        name: "12-class package",
+        price: "16,000 RSD",
+        desc: "For those who want continuity, faster progress and a more secure feeling in the body.",
+        cta: "Sign up",
+      },
+    ],
+    note: "Example: if you pay 2,000 RSD for a trial class and then choose the 8-class package, you pay the difference of 10,400 RSD.",
+  },
+  beforeTeaser: {
+    title: "Before your first class",
+    body: "Bring light, comfortable clothing. You practice barefoot or in socks, without trainers. You do not need to bring a towel, they are available at the studio if you would like to shower after training.",
+    cards: ["Light clothing", "Barefoot or socks", "Towels available"],
+    cta: "Learn more",
+  },
   showcase: {
     title: "Feel the difference after your very first class.",
     text: "Every session is guided so you leave stronger, calmer, and more connected to your body.",
@@ -205,6 +236,74 @@ const en: Dictionary = {
     addressLabel: "12 Nikole Pašića Square, Belgrade",
     whatsappLabel: "WhatsApp",
     instagramLabel: "Instagram",
+  },
+  info: {
+    metaTitle: "Before your first class | Reformer Studio 011",
+    metaDescription:
+      "Everything you need before your first reformer pilates class: what to bring, pricing, the cancellation policy and answers to frequently asked questions.",
+    h1: "Before your first class",
+    intro:
+      "Everything you need before coming to Reformer Studio 011, from equipment and booking to pricing and the cancellation policy.",
+    before: {
+      title: "Before your first class",
+      body: "Bring light, comfortable clothing you can move freely in. You practice barefoot or in socks, without trainers. You do not need to bring a towel. They are available at the studio and you are welcome to use them if you would like to shower after training.",
+      items: [
+        "Light, comfortable clothing",
+        "Barefoot or socks",
+        "No trainers",
+        "Towels available at the studio",
+      ],
+    },
+    cancellation: {
+      title: "Cancellation policy",
+      body: "You can cancel at the latest 24h before your scheduled session. After that, the session counts as a used class.",
+    },
+    audience: {
+      title: "Who is reformer pilates for?",
+      body: "Reformer pilates suits a wide range of people, and especially women who want to work on posture, mobility, stability and strength without unnecessary strain on the joints. Controlled movements activate the deep muscles of the abdomen, back and pelvic floor, while the body gradually becomes stronger, more mobile and more secure.",
+      benefits: [
+        "Better posture",
+        "Stronger deep muscles",
+        "More stable core",
+        "Better mobility",
+        "Support for the back",
+        "Pelvic floor activation",
+      ],
+    },
+    trainers: {
+      title: "Certified trainers",
+      body: "Classes are led by trainers certified in reformer pilates, with careful guidance, movement corrections and support throughout the session.",
+    },
+    booking: {
+      title: "Booking",
+      body: "You can book your session via Instagram message, by phone or through WhatsApp.",
+      cta: "Book a session",
+    },
+    faq: {
+      title: "Frequently asked questions",
+      items: [
+        {
+          q: "Is there a free trial class?",
+          a: "The trial class costs 2,000 RSD. If you purchase a package afterwards, that amount is deducted from the package price.",
+        },
+        {
+          q: "What should I bring to training?",
+          a: "Bring light, comfortable clothing. You practice barefoot or in socks, without trainers.",
+        },
+        {
+          q: "Do I need to bring a towel?",
+          a: "No. Towels are available at the studio and are used if you would like to shower after training.",
+        },
+        {
+          q: "Who is reformer pilates for?",
+          a: "It suits a wide range of people, and especially women who want better posture, a stronger core, more mobility and a more stable body.",
+        },
+        {
+          q: "When do I need to cancel a session?",
+          a: "You need to cancel at least 24h in advance. Otherwise, the session counts as a used class.",
+        },
+      ],
+    },
   },
   footer: {
     contact: "Contact",

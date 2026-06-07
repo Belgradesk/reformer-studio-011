@@ -1736,6 +1736,194 @@ section {
   }
 }
 
+/* ── Pricing ── */
+.pricing {
+  background: var(--cream);
+}
+
+.pricing h2 {
+  font-size: clamp(2.4rem, 5.5vw, 5rem);
+  line-height: 1.05;
+  margin-bottom: 3rem;
+}
+
+.pricing-list {
+  border-top: 1px solid var(--line);
+}
+
+.pricing-item {
+  display: grid;
+  grid-template-columns: 1.1fr 0.75fr 2fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.4rem 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  transition: background 0.5s var(--ease), padding-left 0.5s var(--ease);
+}
+
+.pricing-item:hover {
+  padding-left: 1.5rem;
+}
+
+.pricing-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: var(--sage-soft);
+  opacity: 0.35;
+  z-index: -1;
+  transition: width 0.6s var(--ease);
+}
+
+.pricing-item:hover::before {
+  width: 100%;
+}
+
+.pricing-name {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.05;
+}
+
+.pricing-price {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  color: var(--sage);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.pricing-desc {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  max-width: 42ch;
+  line-height: 1.55;
+}
+
+.pricing-note {
+  margin-top: 1.75rem;
+  max-width: 58ch;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .pricing-list {
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .pricing-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 1.35rem 0 1.5rem;
+    border-top: 1px solid var(--line);
+    border-bottom: none;
+    cursor: default;
+  }
+
+  .pricing-list .pricing-item:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .pricing-item:hover {
+    padding-left: 0;
+  }
+
+  .pricing-item::before {
+    display: none;
+  }
+
+  .pricing-name {
+    width: 100%;
+    font-size: clamp(1.35rem, 5vw, 1.75rem);
+  }
+
+  .pricing-price {
+    width: 100%;
+    white-space: normal;
+    font-size: clamp(1.35rem, 4.5vw, 1.65rem);
+  }
+
+  .pricing-desc {
+    width: 100%;
+    max-width: none;
+  }
+
+  .pricing-cta {
+    margin-top: 0.35rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    align-self: stretch;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    border: var(--hairline);
+    background: color-mix(in srgb, var(--parchment) 70%, white);
+  }
+}
+
+/* ── Before first class teaser ── */
+.before-teaser {
+  background: var(--parchment);
+}
+
+.before-teaser h2 {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  line-height: 1.08;
+  margin-bottom: 1rem;
+}
+
+.before-teaser-body {
+  max-width: 58ch;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-bottom: 1.75rem;
+}
+
+.before-teaser-cards {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.before-teaser-card {
+  padding: 0.85rem 1.25rem;
+  border: var(--hairline);
+  background: color-mix(in srgb, var(--cream) 60%, white);
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+.before-teaser-cta {
+  margin-top: 0.25rem;
+}
+
+.before-teaser-link {
+  color: var(--ink);
+}
+
+.before-teaser-link .arw {
+  background: var(--ink);
+}
+
+.before-teaser-link .arw::after {
+  border-color: var(--ink);
+}
+
 .showcase {
   position: relative;
   height: 100svh;
@@ -1746,18 +1934,18 @@ section {
   justify-content: center;
 }
 
-#webgl {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
 .showcase-poster {
   position: absolute;
   inset: 0;
   z-index: 0;
   opacity: 0.35;
   overflow: hidden;
+}
+
+.showcase-poster video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .showcase-poster::after {
@@ -2153,4 +2341,157 @@ section {
   .hero-idx {
     display: none;
   }
+}
+
+/* ── Info page ── */
+.info-page {
+  background: var(--parchment);
+}
+
+.info-hero {
+  background: var(--cream);
+  padding-top: calc(var(--nav-offset) + 1rem);
+}
+
+.info-hero h1 {
+  font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+}
+
+.info-intro {
+  max-width: 58ch;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.info-section {
+  border-top: var(--hairline);
+}
+
+.info-section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.info-body {
+  max-width: 58ch;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.info-pills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-pill {
+  padding: 0.7rem 1.1rem;
+  border: var(--hairline);
+  background: var(--cream);
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.03em;
+}
+
+.info-pills--benefits {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.info-pricing {
+  border-top: var(--hairline);
+}
+
+.info-booking-cta {
+  margin-top: 1.75rem;
+}
+
+.info-faq {
+  padding-block: var(--space-section-dense);
+  border-top: var(--hairline);
+  max-width: 720px;
+}
+
+.faq-accordion {
+  border-top: 1px solid var(--line);
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.35rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.faq-trigger:hover {
+  color: var(--sage-deep);
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  position: relative;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  background: var(--sage);
+  transition: transform 0.35s var(--ease);
+}
+
+.faq-icon::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.faq-icon::after {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.faq-item--open .faq-icon::after {
+  transform: translateX(-50%) scaleY(0);
+}
+
+.faq-panel {
+  padding-bottom: 1.35rem;
+}
+
+.faq-panel p {
+  max-width: 58ch;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
