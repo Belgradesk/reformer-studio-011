@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { BookingButton } from "@/components/BookingButton";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -93,17 +94,31 @@ export default async function InfoPage({ params }: PageProps) {
             <h2 id="info-audience-title" className="info-section-title reveal">
               {info.audience.title}
             </h2>
-            <p className="info-body reveal reveal-d1">{info.audience.body}</p>
-            <ul className="info-pills info-pills--benefits">
-              {info.audience.benefits.map((item, i) => (
-                <li
-                  key={item}
-                  className={`info-pill reveal${i % 3 === 1 ? " reveal-d1" : i % 3 === 2 ? " reveal-d2" : ""}`}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className="info-audience-grid">
+              <div className="info-audience-text">
+                <p className="info-body reveal reveal-d1">{info.audience.body}</p>
+                <ul className="info-pills info-pills--benefits">
+                  {info.audience.benefits.map((item, i) => (
+                    <li
+                      key={item}
+                      className={`info-pill reveal${i % 3 === 1 ? " reveal-d1" : i % 3 === 2 ? " reveal-d2" : ""}`}
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="info-audience-media reveal reveal-d2">
+                <Image
+                  src="/assets/oprema-detalj.webp"
+                  alt=""
+                  width={1600}
+                  height={1200}
+                  sizes="(max-width: 900px) 100vw, 42vw"
+                  className="info-audience-img"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
