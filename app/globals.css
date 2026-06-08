@@ -8,6 +8,8 @@
   --sage-deep: #5d4631;
   --sage-soft: #e3d6c4;
   --line: #e1daca;
+  --aqua: #d2edee;
+  --aqua-soft: #edf8f8;
   --terra: #6b4a2f;
   --serif: var(--font-cormorant), serif;
   --sans: var(--font-manrope), sans-serif;
@@ -459,15 +461,21 @@ h4 em,
   background: var(--ink);
   color: var(--cream);
   font-size: 1rem;
+  transition:
+    background 0.35s var(--ease),
+    color 0.35s var(--ease),
+    transform 0.2s ease;
 }
 
 .booking-btn--primary .arw {
   width: 28px;
   height: 1px;
-  background: var(--cream);
+  background: var(--aqua);
   position: relative;
   flex-shrink: 0;
-  transition: transform 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.35s var(--ease);
 }
 
 .booking-btn--primary .arw::after {
@@ -477,18 +485,39 @@ h4 em,
   top: -3px;
   width: 7px;
   height: 7px;
-  border-top: 1px solid var(--cream);
-  border-right: 1px solid var(--cream);
+  border-top: 1px solid var(--aqua);
+  border-right: 1px solid var(--aqua);
   transform: rotate(45deg);
+  transition: border-color 0.35s var(--ease);
 }
 
-.booking-btn--primary:hover {
-  background: color-mix(in srgb, var(--ink) 92%, black);
-  transform: translateY(-1px);
-}
+@media (hover: hover) and (pointer: fine) {
+  .booking-btn--primary:hover {
+    background: var(--aqua);
+    color: var(--ink);
+    transform: translateY(-1px);
+  }
 
-.booking-btn--primary:hover .arw {
-  transform: translateX(4px);
+  .booking-btn--primary:hover .arw {
+    background: var(--ink);
+    transform: translateX(4px);
+  }
+
+  .booking-btn--primary:hover .arw::after {
+    border-color: var(--ink);
+  }
+
+  .nav-booking-btn.booking-btn--secondary:hover {
+    background: var(--aqua);
+    color: var(--ink);
+    transform: translateY(-1px);
+  }
+
+  .booking-btn--sticky:hover {
+    background: var(--aqua);
+    color: var(--ink);
+    transform: translateY(-1px);
+  }
 }
 
 .booking-btn--secondary {
@@ -519,12 +548,10 @@ h4 em,
   letter-spacing: 0.14em;
   text-transform: uppercase;
   white-space: nowrap;
-}
-
-.nav-booking-btn.booking-btn--secondary:hover {
-  background: color-mix(in srgb, var(--ink) 92%, black);
-  color: var(--cream);
-  transform: translateY(-1px);
+  transition:
+    background 0.35s var(--ease),
+    color 0.35s var(--ease),
+    transform 0.2s ease;
 }
 
 .prog-cta.booking-btn--secondary {
@@ -558,11 +585,10 @@ h4 em,
   letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: 0;
-}
-
-.booking-btn--sticky:hover {
-  background: color-mix(in srgb, var(--ink) 92%, black);
-  transform: translateY(-1px);
+  transition:
+    background 0.35s var(--ease),
+    color 0.35s var(--ease),
+    transform 0.2s ease;
 }
 
 .cta-band-btn.booking-btn--primary {
@@ -1121,8 +1147,9 @@ h4 em,
 .hero-cta .arw {
   width: 42px;
   height: 1px;
-  background: var(--ink);
+  background: var(--aqua);
   position: relative;
+  transition: background 0.35s var(--ease);
 }
 
 .hero-cta .arw::after {
@@ -1132,9 +1159,10 @@ h4 em,
   top: -3px;
   width: 7px;
   height: 7px;
-  border-top: 1px solid var(--ink);
-  border-right: 1px solid var(--ink);
+  border-top: 1px solid var(--aqua);
+  border-right: 1px solid var(--aqua);
   transform: rotate(45deg);
+  transition: border-color 0.35s var(--ease);
 }
 
 .hero-media {
@@ -1661,11 +1689,16 @@ section {
   border-bottom: 1px solid var(--line);
   position: relative;
   cursor: none;
-  transition: background 0.5s var(--ease), padding-left 0.5s var(--ease);
+  transition:
+    background 0.5s var(--ease),
+    padding-left 0.5s var(--ease);
 }
 
-.prog-item:hover {
-  padding-left: 1.5rem;
+@media (hover: hover) and (pointer: fine) {
+  .prog-item:hover {
+    padding-left: 1.5rem;
+    background: var(--aqua-soft);
+  }
 }
 
 .prog-item .pn {
@@ -1703,23 +1736,6 @@ section {
 .prog-cta:hover {
   color: var(--sage-deep);
   border-color: var(--sage-deep);
-}
-
-.prog-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 0;
-  background: var(--sage-soft);
-  opacity: 0.35;
-  z-index: -1;
-  transition: width 0.6s var(--ease);
-}
-
-.prog-item:hover::before {
-  width: 100%;
 }
 
 @media (max-width: 860px) {
@@ -1916,14 +1932,6 @@ section {
   color: var(--ink);
 }
 
-.before-teaser-link .arw {
-  background: var(--ink);
-}
-
-.before-teaser-link .arw::after {
-  border-color: var(--ink);
-}
-
 .showcase {
   position: relative;
   height: 100svh;
@@ -2100,7 +2108,7 @@ section {
 }
 
 .cta-band {
-  background: var(--parchment);
+  background: linear-gradient(180deg, var(--parchment) 0%, var(--aqua-soft) 100%);
   padding: 84px clamp(1.5rem, 5vw, 4rem) 68px;
   text-align: center;
 }
