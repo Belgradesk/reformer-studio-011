@@ -66,7 +66,7 @@ const en: Dictionary = {
     p2: "In small groups, with careful guidance, you work on core, posture, mobility, and stability.",
     p3: "You do not come here only for a class. You come to feel better in your body.",
     figcap: "Detail. Control. Stillness.",
-    imgAlt: "Detail of hand and black reformer strap",
+    imgAlt: "Reformer exercise with a pilates ball in the studio",
   },
   highlights: {
     items: [
@@ -213,18 +213,18 @@ const en: Dictionary = {
     items: [
       {
         quote:
-          "After just a few sessions I feel better stability and more control in movement.",
-        author: "M. J. · 34",
+          "As someone with longstanding back and shoulder issues, I searched for the right instructor for a long time. Tanja is incredibly knowledgeable, attentive, and knows exactly how to adapt every exercise to my body. I feel tremendous progress and relief.",
+        author: "Bojana Đ.",
       },
       {
         quote:
-          "I came with no prior experience and relaxed quickly. The instructor explains every movement clearly and adapts exercises to my level.",
-        author: "A. K. · 29",
+          "Exceptionally kind and professional, attentive throughout the entire session — she motivates you to get the most out of yourself. A pleasant training environment, clean and truly worth every recommendation.",
+        author: "Ljiljana G.",
       },
       {
         quote:
-          "The studio has a calm atmosphere, and the sessions are precise and effective. I feel my posture and strength gradually improving.",
-        author: "S. R. · 41",
+          "The studio has a calm atmosphere and the sessions are precise and efficient. I can feel my posture and strength gradually improving.",
+        author: "Sara R.",
       },
     ],
   },

@@ -30,6 +30,7 @@ export function Hero({ hero, locale }: HeroProps) {
             </span>
           )}
         </h1>
+        <span className="hero-accent-line" aria-hidden="true" />
         <p className="hero-sub">{hero.sub}</p>
         <div className="hero-actions">
           <BookingButton locale={locale} ariaLabel={hero.ctaPrimaryAria}>

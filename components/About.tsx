@@ -20,10 +20,12 @@ export function About({ about }: AboutProps) {
         </div>
         <div className="figure reveal reveal-d1">
           <Image
-            src="/assets/about-arm.jpg"
+            src="/assets/about-reformer.webp"
             alt={about.imgAlt}
-            fill
-            sizes="(max-width: 860px) 100vw, 45vw"
+            width={1024}
+            height={660}
+            sizes="(max-width: 860px) 100vw, 48vw"
+            quality={88}
             className="img-cover about-img"
           />
           <div className="figcap">{about.figcap}</div>

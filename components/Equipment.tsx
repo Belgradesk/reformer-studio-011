@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import type { Dictionary } from "@/lib/i18n";
 
 const CARD_SRC = [
@@ -24,15 +24,24 @@ type EquipCardMediaProps = {
 
 function EquipCardMedia({ imageSrc, alt, videoSrc }: EquipCardMediaProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoVisible, setVideoVisible] = useState(false);
 
   const handleMouseEnter = () => {
     const video = videoRef.current;
-    if (video) void video.play();
+    if (!video) return;
+    setVideoVisible(true);
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // play() interrupted by pause() on quick hover — safe to ignore
+      });
+    }
   };
 
   const handleMouseLeave = () => {
     const video = videoRef.current;
     if (!video) return;
+    setVideoVisible(false);
     video.pause();
     video.currentTime = 0;
   };
@@ -44,14 +53,30 @@ function EquipCardMedia({ imageSrc, alt, videoSrc }: EquipCardMediaProps) {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
+        <Image
+          src={imageSrc}
+          alt={alt}
+          fill
+          sizes="(max-width: 860px) 100vw, 33vw"
+          className="img-cover equip-img"
+        />
         <video
           ref={videoRef}
           muted
           loop
           playsInline
           preload="none"
-          poster={imageSrc}
           className="img-cover equip-img"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            pointerEvents: "none",
+            opacity: videoVisible ? 1 : 0,
+            transition: "opacity 0.4s ease",
+          }}
         >
           <source src={videoSrc.webm} type="video/webm" />
           <source src={videoSrc.mp4} type="video/mp4" />

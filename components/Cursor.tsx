@@ -36,19 +36,13 @@ export function Cursor() {
     const root = rootRef.current;
     if (!root) return;
 
-    const shadow = root.querySelector<HTMLElement>(".cursor-shadow");
-    const aura = root.querySelector<HTMLElement>(".cursor-aura");
     const frame = root.querySelector<HTMLElement>(".cursor-frame");
     const core = root.querySelector<HTMLElement>(".cursor-core");
 
-    if (!shadow || !aura || !frame || !core) return;
+    if (!frame || !core) return;
 
     let mx = 0;
     let my = 0;
-    let ax = 0;
-    let ay = 0;
-    let sx = 0;
-    let sy = 0;
     let fx = 0;
     let fy = 0;
     let mode: CursorMode = "default";
@@ -77,14 +71,8 @@ export function Cursor() {
     };
 
     const tick = () => {
-      ax += (mx - ax) * 0.14;
-      ay += (my - ay) * 0.14;
-      sx += (mx - sx) * 0.09;
-      sy += (my - sy) * 0.09;
       fx += (mx - fx) * 0.2;
       fy += (my - fy) * 0.2;
-      place(aura, ax, ay);
-      place(shadow, sx, sy);
       place(frame, fx, fy);
       raf = requestAnimationFrame(tick);
     };
@@ -107,8 +95,6 @@ export function Cursor() {
 
   return (
     <div ref={rootRef} className="cursor-system" aria-hidden>
-      <div className="cursor-shadow" />
-      <div className="cursor-aura" />
       <div className="cursor-frame">
         <i />
         <i />

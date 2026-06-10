@@ -67,7 +67,7 @@ const sr: Dictionary = {
     p2: "U malim grupama, uz pažljivo vođenje, radiš na core-u, držanju, mobilnosti i stabilnosti.",
     p3: "Ovde ne dolaziš samo na čas. Dolaziš da se osećaš bolje u svom telu.",
     figcap: "Detalj. Kontrola. Tišina.",
-    imgAlt: "Detalj, ruka i crni kaiš reformera",
+    imgAlt: "Vežba na reformeru sa pilates loptom u studiju",
   },
   highlights: {
     items: [
@@ -214,18 +214,18 @@ const sr: Dictionary = {
     items: [
       {
         quote:
-          "Već posle nekoliko treninga osećam bolju stabilnost i više kontrole u pokretu.",
-        author: "M. J. · 34",
+          "Kao neko ko ima dugogodišnje probleme sa kičmom i ramenom, dugo sam tražila adekvatnog instruktora. Tanja je neverovatno stručna, pažljiva i tačno zna kako da prilagodi svaku vežbu mom telu. Osećam ogroman napredak i olakšanje.",
+        author: "Bojana Đ.",
       },
       {
         quote:
-          "Došla sam bez prethodnog iskustva i brzo sam se opustila. Instruktor jasno objašnjava svaki pokret i prilagođava vežbe mom nivou.",
-        author: "A. K. · 29",
+          "Izuzetno ljubazna i profesionalna, pažljiva i tokom celog treninga pruža podršku i motiviše tako da izvuče maksimum iz nas. Prijatan ambijent za vežbanje, čist i stvarno za svaku preporuku.",
+        author: "Ljiljana G.",
       },
       {
         quote:
           "Studio ima mirnu atmosferu, a treninzi su precizni i efikasni. Osećam da mi se držanje i snaga postepeno popravljaju.",
-        author: "S. R. · 41",
+        author: "Sara R.",
       },
     ],
   },
