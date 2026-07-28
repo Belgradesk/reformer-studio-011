@@ -12,7 +12,7 @@ export function Instructor({ instructor }: InstructorProps) {
         <h2 id="instructor-title" className="reveal">
           {instructor.title}
         </h2>
-        {/* TODO: bio instruktora — sertifikati, godine iskustva, pristup */}
+        {/* TODO: bio instruktora, sertifikati, godine iskustva, pristup */}
         <p className="instructor-bio reveal reveal-d1">{instructor.bioPlaceholder}</p>
         <ul className="instructor-trust reveal reveal-d2">
           {instructor.bullets.map((bullet) => (

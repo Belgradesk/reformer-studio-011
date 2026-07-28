@@ -64,17 +64,32 @@ export default async function InfoPage({ params }: PageProps) {
             <h2 id="info-before-title" className="info-section-title reveal">
               {info.before.title}
             </h2>
-            <ul className="info-pills">
-              {info.before.items.map((item, i) => (
-                <li
-                  key={item}
-                  className={`info-pill reveal${i === 1 ? " reveal-d1" : i === 2 ? " reveal-d2" : i === 3 ? " reveal-d3" : ""}`}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="info-body reveal">{info.before.body}</p>
+            <div className="info-before-grid">
+              <div className="info-before-media reveal reveal-d1">
+                <Image
+                  src="/assets/info-prvi-cas.webp"
+                  alt={info.before.imgAlt}
+                  width={1200}
+                  height={1500}
+                  quality={88}
+                  sizes="(max-width: 900px) 100vw, 40vw"
+                  className="img-cover info-before-img"
+                />
+              </div>
+              <div className="info-before-text">
+                <ul className="info-pills">
+                  {info.before.items.map((item, i) => (
+                    <li
+                      key={item}
+                      className={`info-pill reveal${i === 1 ? " reveal-d1" : i === 2 ? " reveal-d2" : i === 3 ? " reveal-d3" : ""}`}
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="info-body reveal">{info.before.body}</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -111,7 +126,7 @@ export default async function InfoPage({ params }: PageProps) {
               <div className="info-audience-media reveal reveal-d2">
                 <Image
                   src="/assets/oprema-detalj.webp"
-                  alt=""
+                  alt={info.audience.imgAlt}
                   width={1600}
                   height={1200}
                   sizes="(max-width: 900px) 100vw, 42vw"
@@ -124,10 +139,28 @@ export default async function InfoPage({ params }: PageProps) {
 
         <section className="info-section section-dense" aria-labelledby="info-trainers-title">
           <div className="wrap">
-            <h2 id="info-trainers-title" className="info-section-title reveal">
-              {info.trainers.title}
-            </h2>
-            <p className="info-body reveal reveal-d1">{info.trainers.body}</p>
+            <div className="info-trainers-grid">
+              <div className="info-trainers-media reveal">
+                <Image
+                  src="/assets/info-treneri.webp"
+                  alt={info.trainers.imgAlt}
+                  width={1200}
+                  height={1500}
+                  quality={88}
+                  sizes="(max-width: 900px) 100vw, 38vw"
+                  className="img-cover info-trainers-img"
+                />
+              </div>
+              <div className="info-trainers-text">
+                <h2
+                  id="info-trainers-title"
+                  className="info-section-title reveal reveal-d1"
+                >
+                  {info.trainers.title}
+                </h2>
+                <p className="info-body reveal reveal-d2">{info.trainers.body}</p>
+              </div>
+            </div>
           </div>
         </section>
 

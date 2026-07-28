@@ -23,7 +23,7 @@ export function Pricing({ pricing, locale, id = "cenovnik", className = "" }: Pr
           {pricing.cards.map((card, i) => (
             <div
               key={card.name}
-              className={`pricing-item reveal${i === 1 ? " reveal-d1" : i === 2 ? " reveal-d2" : ""}`}
+              className={`pricing-item reveal${i > 0 ? ` reveal-d${Math.min(i, 3)}` : ""}`}
             >
               <span className="pricing-name">{card.name}</span>
               <span className="pricing-price">{card.price}</span>

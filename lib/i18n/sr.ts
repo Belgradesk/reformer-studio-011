@@ -62,9 +62,9 @@ const sr: Dictionary = {
   ],
   about: {
     eyebrow: "O studiju",
-    title: "Tvoja oaza u srcu Beograda.",
-    p1: "Reformer Studio 011 je prostor za trening koji jača, izdužuje i vraća telo u ravnotežu.",
-    p2: "U malim grupama, uz pažljivo vođenje, radiš na core-u, držanju, mobilnosti i stabilnosti.",
+    title: "Tvoj ritam u srcu Beograda",
+    p1: "Reformer Studio 011 je prostor za trening koji jača, izdužuje i oblikuje telo, vraćajući ga u ravnotežu.",
+    p2: "U malim grupama, uz pažljivo vođenje, radiš na core-u, držanju, mobilnosti i stabilnosti, gradeći izduženu, definisanu liniju tela.",
     p3: "Ovde ne dolaziš samo na čas. Dolaziš da se osećaš bolje u svom telu.",
     figcap: "Detalj. Kontrola. Tišina.",
     imgAlt: "Vežba na reformeru sa pilates loptom u studiju",
@@ -90,10 +90,10 @@ const sr: Dictionary = {
     title: "Drvo, čelik i precizan pokret.",
     p1: "U studiju te čekaju novi, moderni reformeri, osmišljeni za stabilan, siguran i kontrolisan trening. Toplina drveta, čvrstina konstrukcije i preciznost opruga pružaju podršku u svakom pokretu.",
     p2: "Reformer vodi telo, ali ne radi umesto njega. Svaki pokret traži aktivaciju, kontrolu i prisutnost.",
-    p3: "Rezultat je telo koje postaje snažnije, stabilnije i slobodnije.",
+    p3: "Rezultat je telo koje postaje snažnije, stabilnije i slobodnije. Platforma reformera klizi pod tobom. Telo je stalno stabilizuje, pa kor radi i kad pokret izgleda miran.",
     cards: [
       {
-        alt: "Stabilnost i core na reformeru",
+        alt: "Reformer sa pilates krugom i oprugama, pogled odozgo",
         title: "Stabilnost iz centra",
         desc: "Duboki mišići rade zajedno da telo bude stabilno i sigurno.",
       },
@@ -105,7 +105,7 @@ const sr: Dictionary = {
       {
         alt: "Snaga pod kontrolom na reformeru",
         title: "Snaga pod kontrolom",
-        desc: "Otpor opruga gradi snagu na precizan i bezbedan način.",
+        desc: "Otpor opruga gradi snagu, a instruktori vode pokret precizno i bezbedno.",
       },
     ],
   },
@@ -118,7 +118,7 @@ const sr: Dictionary = {
       {
         num: "01",
         title: "Osnove pokreta",
-        desc: "Uvod u reformer pilates kroz postavu tela, aktivaciju centra i sigurno upoznavanje sa opremom.",
+        desc: "Uvod u reformer pilates kroz pravilno držanje tela, aktivaciju centra i sigurno upoznavanje sa opremom.",
         whatsappMessage: "Zdravo, zanima me program Osnove pokreta",
       },
       {
@@ -138,7 +138,7 @@ const sr: Dictionary = {
   firstSession: {
     title: "Kako izgleda prvi trening?",
     intro:
-      "Prvi dolazak je jednostavan, miran i potpuno vođen. Ne moraš da znaš vežbe unapred — instruktor te vodi kroz svaki korak. Svaki trening traje 50 minuta.",
+      "Prvi dolazak je jednostavan, miran i potpuno vođen. Ne moraš da znaš vežbe unapred, instruktor te vodi kroz svaki korak. Svaki trening traje 50 minuta.",
     steps: [
       {
         num: "01",
@@ -175,6 +175,12 @@ const sr: Dictionary = {
         cta: "Prijavi se",
       },
       {
+        name: "Paket 10 časova",
+        price: "14.000 RSD",
+        desc: "Za stabilan ritam i vidljiv napredak, uz dovoljno prostora da telo prati tempo.",
+        cta: "Prijavi se",
+      },
+      {
         name: "Paket 12 časova",
         price: "16.000 RSD",
         desc: "Za one koji žele kontinuitet, brži napredak i sigurniji osećaj u telu.",
@@ -198,7 +204,7 @@ const sr: Dictionary = {
   instructor: {
     title: "Ko vodi treninge",
     bioPlaceholder:
-      "TODO: kratak bio instruktora — sertifikati, godine iskustva i pristup treningu.",
+      "TODO: kratak bio instruktora, sertifikati, godine iskustva i pristup treningu.",
     photoPlaceholder: "Fotografija instruktora",
     bullets: [
       "Sertifikovan instruktor",
@@ -231,7 +237,7 @@ const sr: Dictionary = {
   },
   ctaBand: {
     title: "Tvoj prvi čas može biti početak drugačijeg odnosa prema telu.",
-    text: "Pošalji WhatsApp poruku i zakaži prvi trening u mirnom reformer studiju u centru Beograda.",
+    text: "Verujemo da se dobre stvari dele. Pitaj nas o pogodnostima koje možeš ostvariti kao članica studija.",
     cta: "Zakaži prvi trening",
     ctaAria: "Zakaži prvi trening preko WhatsApp-a",
     addressLabel: "Trg Nikole Pašića 12, Beograd",
@@ -254,6 +260,7 @@ const sr: Dictionary = {
         "Bez patika",
         "Peškiri dostupni u studiju",
       ],
+      imgAlt: "Vežbačica bosih stopala na reformeru, noge u kaiševima",
     },
     cancellation: {
       title: "Otkazivanje termina",
@@ -270,10 +277,12 @@ const sr: Dictionary = {
         "Podrška leđima",
         "Aktivacija karličnog dna",
       ],
+      imgAlt: "Detalj reformera, podstavljeni naslon za ramena i trake",
     },
     trainers: {
       title: "Sertifikovani treneri",
       body: "Časove vode treneri sertifikovani za reformer pilates, uz pažljivo vođenje, korekcije pokreta i podršku tokom celog treninga.",
+      imgAlt: "Kontrolisan pokret na reformeru uz stručno vođenje",
     },
     booking: {
       title: "Zakazivanje",

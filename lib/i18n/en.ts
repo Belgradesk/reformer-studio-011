@@ -61,9 +61,9 @@ const en: Dictionary = {
   ],
   about: {
     eyebrow: "About the studio",
-    title: "Your oasis in the heart of Belgrade.",
-    p1: "Reformer Studio 011 is a space for training that strengthens, lengthens, and restores balance to the body.",
-    p2: "In small groups, with careful guidance, you work on core, posture, mobility, and stability.",
+    title: "Your rhythm in the heart of Belgrade",
+    p1: "Reformer Studio 011 is a training space that strengthens, lengthens, and sculpts the body, restoring it to balance.",
+    p2: "In small groups, with attentive guidance, you work on core, posture, mobility, and stability, building a long, defined line.",
     p3: "You do not come here only for a class. You come to feel better in your body.",
     figcap: "Detail. Control. Stillness.",
     imgAlt: "Reformer exercise with a pilates ball in the studio",
@@ -89,10 +89,10 @@ const en: Dictionary = {
     title: "Wood, steel, and precise movement.",
     p1: "New, modern reformers await you in the studio, designed for stable, safe, and controlled training. The warmth of wood, the strength of the frame, and the precision of the springs support every movement.",
     p2: "The reformer guides the body, but does not do the work for it. Every movement asks for activation, control, and presence.",
-    p3: "The result is a body that becomes stronger, more stable, and freer.",
+    p3: "The result is a body that becomes stronger, more stable, and freer. The reformer carriage glides beneath you. The body stabilises it constantly, so the core works even when the movement looks calm.",
     cards: [
       {
-        alt: "Core stability on the reformer",
+        alt: "Reformer with pilates ring and springs, seen from above",
         title: "Stability from centre",
         desc: "Deep muscles work together to keep the body stable and secure.",
       },
@@ -104,7 +104,7 @@ const en: Dictionary = {
       {
         alt: "Controlled strength on the reformer",
         title: "Strength under control",
-        desc: "Spring resistance builds strength in a precise and safe way.",
+        desc: "Spring resistance builds strength, while instructors guide the movement precisely and safely.",
       },
     ],
   },
@@ -117,7 +117,7 @@ const en: Dictionary = {
       {
         num: "01",
         title: "Movement foundations",
-        desc: "An introduction to reformer pilates through posture, centre activation, and a safe first meeting with the equipment.",
+        desc: "An introduction to reformer pilates through proper posture, centre activation, and a safe first meeting with the equipment.",
         whatsappMessage: "Hello, I am interested in the Movement foundations program",
       },
       {
@@ -137,7 +137,7 @@ const en: Dictionary = {
   firstSession: {
     title: "What does the first session look like?",
     intro:
-      "Your first visit is simple, calm, and fully guided. You do not need to know the exercises in advance — the instructor leads you through every step. Each session lasts 50 minutes.",
+      "Your first visit is simple, calm, and fully guided. You do not need to know the exercises in advance, the instructor leads you through every step. Each session lasts 50 minutes.",
     steps: [
       {
         num: "01",
@@ -174,6 +174,12 @@ const en: Dictionary = {
         cta: "Sign up",
       },
       {
+        name: "10-class package",
+        price: "14,000 RSD",
+        desc: "For a steady rhythm and visible progress, with enough room for the body to keep pace.",
+        cta: "Sign up",
+      },
+      {
         name: "12-class package",
         price: "16,000 RSD",
         desc: "For those who want continuity, faster progress and a more secure feeling in the body.",
@@ -197,7 +203,7 @@ const en: Dictionary = {
   instructor: {
     title: "Who leads the sessions",
     bioPlaceholder:
-      "TODO: short instructor bio — certifications, years of experience, and training approach.",
+      "TODO: short instructor bio, certifications, years of experience, and training approach.",
     photoPlaceholder: "Instructor photo",
     bullets: [
       "Certified instructor",
@@ -218,7 +224,7 @@ const en: Dictionary = {
       },
       {
         quote:
-          "Exceptionally kind and professional, attentive throughout the entire session — she motivates you to get the most out of yourself. A pleasant training environment, clean and truly worth every recommendation.",
+          "Exceptionally kind and professional, attentive throughout the entire session, she motivates you to get the most out of yourself. A pleasant training environment, clean and truly worth every recommendation.",
         author: "Ljiljana G.",
       },
       {
@@ -230,7 +236,7 @@ const en: Dictionary = {
   },
   ctaBand: {
     title: "Your first class can be the start of a different relationship with your body.",
-    text: "Send a WhatsApp message and book your first session in a calm reformer studio in central Belgrade.",
+    text: "We believe good things are meant to be shared. Ask us about the benefits available to you as a studio member.",
     cta: "Book your first session",
     ctaAria: "Book your first session via WhatsApp",
     addressLabel: "12 Nikole Pašića Square, Belgrade",
@@ -253,6 +259,7 @@ const en: Dictionary = {
         "No trainers",
         "Towels available at the studio",
       ],
+      imgAlt: "Barefoot exercise on the reformer with feet in straps",
     },
     cancellation: {
       title: "Cancellation policy",
@@ -269,10 +276,12 @@ const en: Dictionary = {
         "Support for the back",
         "Pelvic floor activation",
       ],
+      imgAlt: "Reformer detail, padded shoulder rest and straps",
     },
     trainers: {
       title: "Certified trainers",
       body: "Classes are led by trainers certified in reformer pilates, with careful guidance, movement corrections and support throughout the session.",
+      imgAlt: "Controlled reformer movement under expert guidance",
     },
     booking: {
       title: "Booking",

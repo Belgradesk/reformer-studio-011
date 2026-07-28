@@ -21,15 +21,18 @@ export function waLink(message: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
-export const PRICING_WHATSAPP_MESSAGES: Record<Locale, [string, string, string]> = {
+// redosled prati pricing.cards u lib/i18n — poruka se bira po indeksu kartice
+export const PRICING_WHATSAPP_MESSAGES: Record<Locale, string[]> = {
   sr: [
     "Zdravo! Želim da zakažem probni čas.",
     "Zdravo! Zanima me paket od 8 časova.",
+    "Zdravo! Zanima me paket od 10 časova.",
     "Zdravo! Zanima me paket od 12 časova.",
   ],
   en: [
     "Hi! I'd like to book a trial class.",
     "Hi! I'm interested in the 8-class package.",
+    "Hi! I'm interested in the 10-class package.",
     "Hi! I'm interested in the 12-class package.",
   ],
 };

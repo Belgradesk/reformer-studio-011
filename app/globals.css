@@ -2334,7 +2334,7 @@ section {
   }
 }
 
-/* Mobile hero — full-screen overlay (≤768px) */
+/* Mobile hero, full-screen overlay (≤768px) */
 @media (max-width: 768px) {
   .hero {
     min-height: 100svh;
@@ -2536,6 +2536,68 @@ section {
     order: 2;
     margin-top: 1.5rem;
     aspect-ratio: 4 / 3;
+  }
+}
+
+/* --- Pre prvog casa: slika levo, tekst desno --- */
+.info-before-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+.info-before-media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: var(--parchment);
+}
+
+.info-before-img {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+
+/* --- Sertifikovani treneri: slika levo, tekst desno --- */
+.info-trainers-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.68fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.info-trainers-media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: var(--parchment);
+}
+
+.info-trainers-img {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .info-before-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-before-media {
+    order: 2;
+    margin-top: 1.5rem;
+    aspect-ratio: 4 / 5;
+  }
+
+  .info-trainers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-trainers-media {
+    order: 2;
+    margin-top: 1.5rem;
+    aspect-ratio: 4 / 5;
   }
 }
 

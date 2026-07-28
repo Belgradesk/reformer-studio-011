@@ -139,6 +139,7 @@ export interface Dictionary {
       title: string;
       body: string;
       items: string[];
+      imgAlt: string;
     };
     cancellation: {
       title: string;
@@ -148,10 +149,12 @@ export interface Dictionary {
       title: string;
       body: string;
       benefits: string[];
+      imgAlt: string;
     };
     trainers: {
       title: string;
       body: string;
+      imgAlt: string;
     };
     booking: {
       title: string;

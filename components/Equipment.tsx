@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import type { Dictionary } from "@/lib/i18n";
 
 const CARD_SRC = [
-  "/assets/detail-wood.jpg",
+  "/assets/oprema-krug.webp",
   "/assets/springs.jpg",
   "/assets/reformer-interior.jpg",
 ];
@@ -33,7 +33,7 @@ function EquipCardMedia({ imageSrc, alt, videoSrc }: EquipCardMediaProps) {
     const playPromise = video.play();
     if (playPromise !== undefined) {
       playPromise.catch(() => {
-        // play() interrupted by pause() on quick hover — safe to ignore
+        // play() interrupted by pause() on quick hover, safe to ignore
       });
     }
   };
