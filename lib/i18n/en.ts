@@ -89,7 +89,7 @@ const en: Dictionary = {
     title: "Wood, steel, and precise movement.",
     p1: "New, modern reformers await you in the studio, designed for stable, safe, and controlled training. The warmth of wood, the strength of the frame, and the precision of the springs support every movement.",
     p2: "The reformer guides the body, but does not do the work for it. Every movement asks for activation, control, and presence.",
-    p3: "The result is a body that becomes stronger, more stable, and freer. The reformer carriage glides beneath you. The body stabilises it constantly, so the core works even when the movement looks calm.",
+    p3: "The result is a body that becomes stronger, more stable, and freer.",
     cards: [
       {
         alt: "Reformer with pilates ring and springs, seen from above",

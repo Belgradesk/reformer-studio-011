@@ -56,7 +56,7 @@ const sr: Dictionary = {
     "Popravljanje posture",
     "Jačanje dubokih mišića",
     "Bolja mobilnost",
-    "Stabilniji core",
+    "Snažniji core",
     "Podrška leđima",
     "Aktivacija mišića karličnog dna",
   ],
@@ -90,7 +90,7 @@ const sr: Dictionary = {
     title: "Drvo, čelik i precizan pokret.",
     p1: "U studiju te čekaju novi, moderni reformeri, osmišljeni za stabilan, siguran i kontrolisan trening. Toplina drveta, čvrstina konstrukcije i preciznost opruga pružaju podršku u svakom pokretu.",
     p2: "Reformer vodi telo, ali ne radi umesto njega. Svaki pokret traži aktivaciju, kontrolu i prisutnost.",
-    p3: "Rezultat je telo koje postaje snažnije, stabilnije i slobodnije. Platforma reformera klizi pod tobom. Telo je stalno stabilizuje, pa kor radi i kad pokret izgleda miran.",
+    p3: "Rezultat je telo koje postaje snažnije, stabilnije i slobodnije.",
     cards: [
       {
         alt: "Reformer sa pilates krugom i oprugama, pogled odozgo",
