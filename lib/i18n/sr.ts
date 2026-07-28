@@ -93,7 +93,7 @@ const sr: Dictionary = {
     p3: "Rezultat je telo koje postaje snažnije, stabilnije i slobodnije.",
     cards: [
       {
-        alt: "Reformer sa pilates krugom i oprugama, pogled odozgo",
+        alt: "Instruktorka vežba na reformeru sa kaiševima",
         title: "Stabilnost iz centra",
         desc: "Duboki mišići rade zajedno da telo bude stabilno i sigurno.",
       },
@@ -277,7 +277,7 @@ const sr: Dictionary = {
         "Podrška leđima",
         "Aktivacija karličnog dna",
       ],
-      imgAlt: "Detalj reformera, podstavljeni naslon za ramena i trake",
+      imgAlt: "Reformer sa pilates krugom i oprugama, pogled odozgo",
     },
     trainers: {
       title: "Sertifikovani treneri",

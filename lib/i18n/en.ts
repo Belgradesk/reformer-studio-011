@@ -92,7 +92,7 @@ const en: Dictionary = {
     p3: "The result is a body that becomes stronger, more stable, and freer.",
     cards: [
       {
-        alt: "Reformer with pilates ring and springs, seen from above",
+        alt: "Instructor exercising on the reformer with straps",
         title: "Stability from centre",
         desc: "Deep muscles work together to keep the body stable and secure.",
       },
@@ -276,7 +276,7 @@ const en: Dictionary = {
         "Support for the back",
         "Pelvic floor activation",
       ],
-      imgAlt: "Reformer detail, padded shoulder rest and straps",
+      imgAlt: "Reformer with pilates ring and springs, seen from above",
     },
     trainers: {
       title: "Certified trainers",

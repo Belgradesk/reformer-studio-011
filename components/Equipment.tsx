@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import type { Dictionary } from "@/lib/i18n";
 
 const CARD_SRC = [
-  "/assets/oprema-krug.webp",
+  "/assets/oprema-tanja.webp",
   "/assets/springs.jpg",
   "/assets/reformer-interior.jpg",
 ];

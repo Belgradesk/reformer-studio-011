@@ -125,10 +125,10 @@ export default async function InfoPage({ params }: PageProps) {
               </div>
               <div className="info-audience-media reveal reveal-d2">
                 <Image
-                  src="/assets/oprema-detalj.webp"
+                  src="/assets/info-oprema.webp"
                   alt={info.audience.imgAlt}
-                  width={1600}
-                  height={1200}
+                  width={1200}
+                  height={900}
                   sizes="(max-width: 900px) 100vw, 42vw"
                   className="info-audience-img"
                 />
