@@ -18,7 +18,7 @@ export function Showcase({ showcase }: ShowcaseProps) {
           loop
           playsInline
           preload="metadata"
-          poster="/assets/video-poster.jpg"
+          poster="/assets/video-poster.webp"
           className="img-cover"
         >
           <source src="/videos/hero_bg.webm" type="video/webm" />

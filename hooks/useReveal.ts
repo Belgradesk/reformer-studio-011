@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 function revealInViewport() {
@@ -12,6 +13,11 @@ function revealInViewport() {
 }
 
 export function useRevealObserver() {
+  // ClientShell zivi u root layoutu i ne demontira se pri promeni rute,
+  // pa efekat mora da se ponovi na svaku navigaciju: stari observer drzi
+  // uklonjene cvorove, a novi .reveal elementi nikad ne bi bili posmatrani.
+  const pathname = usePathname();
+
   useEffect(() => {
     const io = new IntersectionObserver(
       (entries) => {
@@ -41,5 +47,5 @@ export function useRevealObserver() {
       window.removeEventListener("load", observe);
       io.disconnect();
     };
-  }, []);
+  }, [pathname]);
 }

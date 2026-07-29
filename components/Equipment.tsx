@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Dictionary } from "@/lib/i18n";
 
 const CARD_SRC = [
@@ -22,20 +22,27 @@ type EquipCardMediaProps = {
   videoSrc: { webm: string; mp4: string } | null;
 };
 
+// play() se na iOS-u ume odbiti (Low Power Mode, jos neostvarena interakcija).
+// Tada tiho ostajemo na slici ispod videa, koja sluzi kao poster.
+function safePlay(video: HTMLVideoElement) {
+  const playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      // odbijeno ili prekinuto sa pause(), poster ostaje vidljiv
+    });
+  }
+}
+
 function EquipCardMedia({ imageSrc, alt, videoSrc }: EquipCardMediaProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
   const [videoVisible, setVideoVisible] = useState(false);
 
   const handleMouseEnter = () => {
     const video = videoRef.current;
     if (!video) return;
     setVideoVisible(true);
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // play() interrupted by pause() on quick hover, safe to ignore
-      });
-    }
+    safePlay(video);
   };
 
   const handleMouseLeave = () => {
@@ -46,9 +53,47 @@ function EquipCardMedia({ imageSrc, alt, videoSrc }: EquipCardMediaProps) {
     video.currentTime = 0;
   };
 
+  // Na uredjajima bez hovera nema cime da se pokrene video, pa ga vodi
+  // IntersectionObserver: pusta se tek kad kartica ude u kadar i pauzira
+  // cim izade, da se ne trose ni podaci ni baterija van vidnog polja.
+  useEffect(() => {
+    if (!videoSrc) return;
+    const wrap = wrapRef.current;
+    const video = videoRef.current;
+    if (!wrap || !video) return;
+
+    // desktop zadrzava hover, ovde se nista ne menja
+    if (!window.matchMedia("(hover: none)").matches) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } })
+      .connection;
+    if (connection?.saveData === true) return;
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVideoVisible(true);
+          safePlay(video);
+        } else {
+          setVideoVisible(false);
+          video.pause();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    io.observe(wrap);
+
+    return () => {
+      io.disconnect();
+      video.pause();
+    };
+  }, [videoSrc]);
+
   if (videoSrc) {
     return (
       <div
+        ref={wrapRef}
         style={{ position: "absolute", inset: 0, overflow: "hidden" }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

@@ -17,7 +17,7 @@ export function Logo({ locale, onClick, priority = false }: LogoProps) {
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/assets/logo.png?v=011v2"
+        src="/assets/logo.webp?v=011v2"
         alt=""
         width={660}
         height={660}

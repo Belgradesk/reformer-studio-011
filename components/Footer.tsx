@@ -62,9 +62,9 @@ export function Footer({ footer, locale }: FooterProps) {
 
         <div className="foot-col foot-nav reveal reveal-d2">
           <h5 className="foot-col-head">{footer.studio}</h5>
-          <a href="#studio">{footer.about}</a>
-          <a href="#oprema">{footer.equip}</a>
-          <a href="#programi">{footer.programs}</a>
+          <a href={`/${locale}#studio`}>{footer.about}</a>
+          <a href={`/${locale}#oprema`}>{footer.equip}</a>
+          <a href={`/${locale}#programi`}>{footer.programs}</a>
         </div>
       </div>
       <div className="foot-bottom">

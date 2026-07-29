@@ -247,7 +247,7 @@ const en: Dictionary = {
     metaTitle: "Before your first class | Reformer Studio 011",
     metaDescription:
       "Everything you need before your first reformer pilates class: what to bring, pricing, the cancellation policy and answers to frequently asked questions.",
-    h1: "Before your first class",
+    h1: "Information before your first class",
     intro:
       "Everything you need before coming to Reformer Studio 011, from equipment and booking to pricing and the cancellation policy.",
     before: {
