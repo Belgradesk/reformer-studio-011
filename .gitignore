@@ -21,8 +21,16 @@
 # misc
 .DS_Store
 *.pem
-.env*.local
 Photos/
+
+# env
+.env*
+
+# deployment
+.vercel
+
+# editor
+.claude/
 
 # debug
 npm-debug.log*
