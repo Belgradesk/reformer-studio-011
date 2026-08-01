@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { headers } from "next/headers";
 import { ClientShell } from "@/components/ClientShell";
 import { isLocale } from "@/lib/i18n";
+import { BASE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -21,8 +22,11 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
+  // fallback samo za rute bez svog generateMetadata (npr. 404)
   title: "Reformer Studio 011",
-  description: "Boutique reformer pilates studio in Belgrade.",
+  description:
+    "Reformer pilates studio u Beogradu. Treninzi u malim grupama i individualno.",
 };
 
 export default async function RootLayout({

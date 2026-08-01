@@ -8,6 +8,7 @@ import { FirstSession } from "@/components/FirstSession";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Highlights } from "@/components/Highlights";
+import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
 // import { Instructor } from "@/components/Instructor";
 import { Nav } from "@/components/Nav";
 import { Pricing } from "@/components/Pricing";
@@ -18,6 +19,7 @@ import { StickyBookingBar } from "@/components/StickyBookingBar";
 import { Strip } from "@/components/Strip";
 import { WhyStudio } from "@/components/WhyStudio";
 import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ lang: string }>;
@@ -33,10 +35,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!isLocale(lang)) return {};
   const dict = getDictionary(lang);
-  return {
+  return pageMetadata({
+    locale: lang,
+    path: "",
     title: dict.meta.title,
     description: dict.meta.description,
-  };
+    imageAlt: dict.meta.ogImageAlt,
+  });
 }
 
 export default async function HomePage({ params }: PageProps) {
@@ -48,6 +53,7 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <>
+      <LocalBusinessJsonLd locale={locale} cards={dict.pricing.cards} />
       <Nav locale={locale} nav={dict.nav} />
       <Hero hero={dict.hero} locale={locale} />
       <WhyStudio whyStudio={dict.whyStudio} />

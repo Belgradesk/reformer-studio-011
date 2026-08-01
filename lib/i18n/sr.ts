@@ -5,6 +5,8 @@ const sr: Dictionary = {
     title: "Reformer Studio 011 | Reformer pilates u Beogradu",
     description:
       "Reformer pilates treninzi u Beogradu, u malim grupama i individualnom formatu. Pogodno za početnike, uz stručno vođenje i miran studio ambijent.",
+    ogImageAlt:
+      "Vežbačica na reformeru u studiju Reformer Studio 011 u Beogradu",
   },
   nav: {
     studio: "Studio",

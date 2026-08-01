@@ -5,6 +5,8 @@ const en: Dictionary = {
     title: "Reformer Studio 011 | Reformer pilates in Belgrade",
     description:
       "Reformer pilates sessions in Belgrade, in small groups and individual format. Suitable for beginners, with expert guidance and a calm studio atmosphere.",
+    ogImageAlt:
+      "A woman training on a reformer at Reformer Studio 011 in Belgrade",
   },
   nav: {
     studio: "Studio",

@@ -10,6 +10,7 @@ import { StickyBookingBar } from "@/components/StickyBookingBar";
 import { BOOK_SESSION_MESSAGES } from "@/config/site";
 import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
 import { faqJsonLd } from "@/lib/faq-jsonld";
+import { pageMetadata } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ lang: string }>;
@@ -23,17 +24,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang } = await params;
   if (!isLocale(lang)) return {};
   const dict = getDictionary(lang);
-  return {
+  return pageMetadata({
+    locale: lang,
+    path: "/info",
     title: dict.info.metaTitle,
     description: dict.info.metaDescription,
-    alternates: {
-      canonical: `/${lang}/info`,
-      languages: {
-        sr: "/sr/info",
-        en: "/en/info",
-      },
-    },
-  };
+    imageAlt: dict.meta.ogImageAlt,
+  });
 }
 
 export default async function InfoPage({ params }: PageProps) {

@@ -18,6 +18,8 @@ export interface Dictionary {
   meta: {
     title: string;
     description: string;
+    /** alt za public/assets/og-image.jpg, deli ga naslovna i /info */
+    ogImageAlt: string;
   };
   nav: {
     studio: string;
